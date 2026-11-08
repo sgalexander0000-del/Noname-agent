@@ -1,0 +1,14 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.venv/
+venv/
+.env
+*.log
+
+# runtime session data produced by the demo / CLI
+examples/.sessions/
+data/

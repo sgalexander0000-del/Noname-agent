@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "noname-agent"
+version = "0.1.0"
+description = "A minimal from-scratch ReAct agent runtime (no agent framework)"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+dependencies = []            # runtime is standard library only
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0"]
+
+[project.scripts]
+noname-agent = "noname_agent.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["noname_agent*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
